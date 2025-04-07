@@ -1,42 +1,25 @@
-#!/usr/bin/env python3
-# Author: Mikhail Ibrahim
+# Copyright 2025 Mikhail Ibrahim
 # Date: Mar 6, 2025
-# Description: A Python program that calculates the area and perimeter of a circle based on user input for the radius.
+# Description: A Python program that calculates
+# the area, perimeter, and circumference of a circle,
+# based on user input for the radius.
 
 import math
 
-
-# Function to calculate area
-def calculate_area(radius):
-    """Function to calculate the area of a circle based on the given radius."""
-    return math.pi * radius**2
-
-
-# Function to calculate perimeter
-def calculate_perimeter(radius):
-    """Function to calculate the perimeter of a circle based on the given radius."""
-    return 2 * math.pi * radius
-
-
 def main():
-    """Main function to get user input for radius and display the area and perimeter."""
-    try:
-        # Prompt the user to enter the radius of the circle
-        radius = float(input("Enter the radius of the circle in centimeters: "))
+    # Prompt user for radius input
+    radius = float(input("Enter the radius of the circle: "))
 
-        # Calculate the area and perimeter of the circle
-        area = calculate_area(radius)
-        perimeter = calculate_perimeter(radius)
+    # Calculate area, perimeter, and circumference using math.pi
+    area = math.pi * radius**2
+    perimeter = 2 * math.pi * radius
+    circumference = 2 * math.pi * radius  # Circumference is same as perimeter
 
-        # Display the results with two decimal places
-        print(f"\nArea of the circle: {area:.2f} cm²")
-        print(f"Perimeter of the circle: {perimeter:.2f} cm")
+    # Display results rounded to 2 decimal places
+    print(f"Area: {area:.2f} cm²")
+    print(f"Perimeter: {perimeter:.2f} cm")
+    print(f"Circumference: {circumference:.2f} cm")
 
-    except ValueError:
-        # Handle invalid input if the user does not enter a number
-        print("Invalid input! Please enter a numeric value.")
-
-
-# Check if this script is being run directly (not imported) and call the main function
+# Call the main function
 if __name__ == "__main__":
     main()
